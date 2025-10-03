@@ -27,5 +27,5 @@ metadata:
   namespace: pacman
 spec:
   interval:
-    minutes: 5
+    minutes: 60
   timeZoneName: "Asia/Tokyo"
