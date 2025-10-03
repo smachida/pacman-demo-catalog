@@ -1,9 +1,9 @@
-displayName: Pacman K8s
+displayName: Pacman
 description: Install Pacman app
 category:
   - Games
 type: catalog
-allowMultipleInstances: true
+allowMultipleInstances: false
 scope:
   - workspace
 licensing:
