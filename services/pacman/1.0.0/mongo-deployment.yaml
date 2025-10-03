@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: mongo
+  name: mongo
+  namespace: pacman
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: mongo
+  template:
+    metadata:
+      labels:
+        name: mongo
+    spec:
+      securityContext:
+        fsGroup: 1001
+      containers:
+        #- image: bitnami/mongodb:5.0.24
+        - image: sm-harbor.cna-demo.com/demo-apps/bitnami/mongodb:5.0.24
+          name: mongo
+          ports:
+            - name: mongo
+              containerPort: 27017
+          volumeMounts:
+            - name: mongo-db
+              mountPath: /bitnami/mongodb
+      volumes:
+        - name: mongo-db
+          persistentVolumeClaim:
+            claimName: mongo-storage

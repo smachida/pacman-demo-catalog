@@ -1,0 +1,16 @@
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: Application
+metadata:
+  name: pacman-app
+  namespace: pacman
+spec:
+  applicationSelector:
+    resourceLabelSelectors:
+      - includeResources:
+          - group: ""
+            kind: PersistentVolumeClaim
+        labelSelector:
+          matchLabels:
+            kustomize.toolkit.fluxcd.io/name: ${releaseName}
+---
+

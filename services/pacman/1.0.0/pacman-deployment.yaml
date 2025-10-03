@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: pacman
+  name: pacman
+  namespace: pacman
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: pacman
+  template:
+    metadata:
+      labels:
+        name: pacman
+    spec:
+      serviceAccount: pacman
+      containers:
+#        - image: tuxtof/pacman:1.0.0
+        - image: sm-harbor.cna-demo.com/demo-apps/tuxtof/pacman:1.0.0
+          name: pacman
+          ports:
+            - containerPort: 8080
+              name: http-server
+          env:
+            - name: MY_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName

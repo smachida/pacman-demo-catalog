@@ -1,0 +1,13 @@
+resources:
+  - pacman-namespace.yaml
+  - mongo-pvc.yaml
+  - mongo-deployment.yaml
+  - mongo-service.yaml
+  - pacman-rbac.yaml
+  - pacman-deployment.yaml
+  - pacman-service.yaml
+  - pacman-ingress.yaml
+  - pacman-dashboard.yaml
+  - application.yaml
+  - protectionplan.yaml
+  - appprotectionplan.yaml
