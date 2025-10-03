@@ -1,5 +1,4 @@
 # demo-catalog -
-
  
 apply this in your cluster
 ```
