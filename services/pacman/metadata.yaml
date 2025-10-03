@@ -3,7 +3,7 @@ description: Install Pacman app
 category:
   - Games
 type: catalog
-allowMultipleInstances: false
+allowMultipleInstances: true
 scope:
   - workspace
 licensing:
