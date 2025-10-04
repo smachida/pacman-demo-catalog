@@ -7,10 +7,12 @@ spec:
   applicationSelector:
     resourceLabelSelectors:
       - includeResources:
-          - group: ""
-            kind: PersistentVolumeClaim
-        labelSelector:
-          matchLabels:
-            kustomize.toolkit.fluxcd.io/name: ${releaseName}
----
+        - group: ""
+          kind: Deployment
+        - group: ""
+          kind: Service
+        - group: ""
+          kind: PersistentVolumeClaim
+        - group: ""
+          kind: PersistentVolume
 
