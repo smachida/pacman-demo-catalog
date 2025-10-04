@@ -1,0 +1,8 @@
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: ApplicationSnapshotRestore
+metadata:
+  name: restore-pacman
+  namespace: pacman
+spec:
+  applicationSnapshotName: pacman-app-d22964ce42d543bc-1bf7b37
+  #applicationSnapshotName: pacman-app
