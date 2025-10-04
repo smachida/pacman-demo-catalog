@@ -1,8 +1,8 @@
 # demo-catalog -
-
-
+ 
 apply this in your cluster
 ```
+
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
