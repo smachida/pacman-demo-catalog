@@ -7,12 +7,12 @@ spec:
   applicationSelector:
     resourceLabelSelectors:
       - includeResources:
-        - group: ""
+        - group: apps
           kind: Deployment
         - group: ""
           kind: Service
+        - group: "apps"
+          kind: PersistentVolume
         - group: ""
           kind: PersistentVolumeClaim
-        - group: ""
-          kind: PersistentVolume
 
